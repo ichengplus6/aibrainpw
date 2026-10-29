@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 依赖与构建产物（本站为纯静态，无需构建）
+node_modules/
+dist/
+build/
+
+# 日志与临时文件
+*.log
+*.tmp

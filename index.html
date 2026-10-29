@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aibrain · 为 CEO 搭建第二大脑</title>
+<meta name="description" content="aibrain 是为 CEO 与企业创始人打造的第二大脑：把散落在会议、邮件、文档与头脑中的决策上下文，沉淀为可检索、可推演、可传承的组织资产。私有部署，数据不出企业。">
+<meta name="keywords" content="aibrain,CEO 第二大脑,第二大脑,决策档案,AI 参谋,企业知识库,CEO Copilot,问道信息">
+<meta property="og:title" content="aibrain · 为 CEO 搭建第二大脑">
+<meta property="og:description" content="你的判断力，不该只存在于你的脑子里。aibrain 让每一次决策，都站在过去所有决策之上。">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/aibrain.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1216'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23C89B5C' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23C89B5C'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<!-- ================= 导航 ================= -->
+<header class="nav on-dark" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="aibrain 首页">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="15.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".35"/>
+        <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/>
+        <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+        <circle cx="20" cy="4.5" r="2.4" fill="currentColor"/>
+      </svg>
+      <span class="brand-text">
+        <strong>aibrain</strong>
+        <em>SECOND&nbsp;BRAIN&nbsp;FOR&nbsp;CEO</em>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="#why">为什么</a>
+      <a href="#what">是什么</a>
+      <a href="#capability">能力</a>
+      <a href="#path">落地</a>
+      <a href="#plans">版本</a>
+    </nav>
+
+    <a class="btn btn-gold nav-cta" href="#contact">预约诊断</a>
+
+    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false" aria-controls="drawer">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="#why">为什么 CEO 需要第二大脑</a>
+  <a href="#what">aibrain 是什么</a>
+  <a href="#capability">六项能力</a>
+  <a href="#path">四步落地</a>
+  <a href="#scenes">典型场景</a>
+  <a href="#compare">与通用 AI 的区别</a>
+  <a href="#trust">安全与边界</a>
+  <a href="#plans">交付与版本</a>
+  <a href="#faq">常见问题</a>
+  <a class="btn btn-gold" href="#contact">预约 30 分钟诊断</a>
+</div>
+
+<main id="main">
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow on-dark">aibrain&nbsp;&nbsp;/&nbsp;&nbsp;CEO Second Brain</p>
+
+      <h1 class="hero-title">
+        <span class="ln">为 CEO 搭建</span>
+        <span class="ln hl">第二大脑</span>
+      </h1>
+
+      <p class="hero-sub">
+        公司最重要的一台机器，是 CEO 的判断力。可它至今没有备份：依据散在会议、邮件与聊天里，
+        结论留在记忆里，经验随人流动而蒸发。aibrain 把这些上下文接住、结构化、随叫随到——
+        <strong>让每一次决策，都站在过去所有决策之上。</strong>
+      </p>
+
+      <div class="hero-act">
+        <a class="btn btn-gold" href="#contact">预约 30 分钟诊断</a>
+        <a class="btn btn-ghost-lt" href="#what">看它如何工作</a>
+      </div>
+
+      <p class="hero-fine">
+        <span><i></i>私有部署，数据不出企业</span>
+        <span><i></i>不进入公共模型训练</span>
+        <span><i></i>90 天落地计划</span>
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="orb" viewBox="0 0 560 560" role="img" aria-label="三层同心结构：记忆层、推理层、行动层，围绕 CEO 的判断中心">
+        <defs>
+          <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#C89B5C" stop-opacity=".22"/>
+            <stop offset="55%" stop-color="#C89B5C" stop-opacity=".07"/>
+            <stop offset="100%" stop-color="#C89B5C" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <circle class="orb-glow" cx="280" cy="280" r="268"/>
+
+        <!-- 三层环 -->
+        <circle class="orb-ring" cx="280" cy="280" r="200" stroke-opacity=".16" stroke-width="1"/>
+        <circle class="orb-ring" cx="280" cy="280" r="150" stroke-opacity=".24" stroke-width="1"/>
+        <circle class="orb-ring" cx="280" cy="280" r="100" stroke-opacity=".34" stroke-width="1"/>
+
+        <circle class="orb-ring orb-dash" cx="280" cy="280" r="238" stroke-opacity=".3" stroke-width="1"
+                stroke-dasharray="1 9"/>
+        <circle class="orb-ring orb-dash-2" cx="280" cy="280" r="216" stroke-opacity=".14" stroke-width="1"
+                stroke-dasharray="34 10 4 10"/>
+
+        <!-- 连接线 -->
+        <g class="orb-link" stroke-opacity=".1" stroke-width="1">
+          <line x1="467.9" y1="348.4" x2="280" y2="280"/>
+          <line x1="348.4" y1="467.9" x2="280" y2="280"/>
+          <line x1="151.4" y1="433.2" x2="280" y2="280"/>
+          <line x1="92.1" y1="211.6" x2="280" y2="280"/>
+          <line x1="211.6" y1="92.1" x2="280" y2="280"/>
+          <line x1="408.6" y1="126.8" x2="280" y2="280"/>
+        </g>
+
+        <!-- 外环节点 -->
+        <g class="orb-node">
+          <circle class="orb-node-pulse" cx="467.9" cy="348.4" r="3.4"/>
+          <circle cx="348.4" cy="467.9" r="3"/>
+          <circle class="orb-node-pulse" cx="151.4" cy="433.2" r="3.4" style="animation-delay:1.1s"/>
+          <circle cx="92.1" cy="211.6" r="2.8"/>
+          <circle class="orb-node-pulse" cx="211.6" cy="92.1" r="3.4" style="animation-delay:2.2s"/>
+          <circle cx="408.6" cy="126.8" r="3"/>
+        </g>
+
+        <!-- 中环节点 -->
+        <g class="orb-node" opacity=".8">
+          <circle cx="386.1" cy="386.1" r="2.6"/>
+          <circle class="orb-node-pulse" cx="241.2" cy="424.9" r="3" style="animation-delay:.6s"/>
+          <circle cx="135.1" cy="318.8" r="2.4"/>
+          <circle cx="183.6" cy="165.1" r="2.6"/>
+          <circle class="orb-node-pulse" cx="331.3" cy="139.0" r="3" style="animation-delay:1.7s"/>
+          <circle cx="424.9" cy="241.2" r="2.4"/>
+        </g>
+
+        <!-- 内环节点 -->
+        <g class="orb-node" opacity=".95">
+          <circle cx="376.6" cy="305.9" r="2.2"/>
+          <circle cx="288.7" cy="379.6" r="2.2"/>
+          <circle cx="193.4" cy="330.0" r="2.2"/>
+          <circle cx="209.3" cy="209.3" r="2.2"/>
+          <circle cx="330.0" cy="193.4" r="2.2"/>
+        </g>
+
+        <!-- 中心 -->
+        <circle class="orb-core" cx="280" cy="280" r="5.5"/>
+        <text class="orb-label" x="280" y="308" text-anchor="middle">YOU</text>
+      </svg>
+
+      <div class="orb-legend">
+        <span><b>01</b>记忆层</span>
+        <span><b>02</b>推理层</span>
+        <span><b>03</b>行动层</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <b>接入你的上下文</b>
+      <i></i><span>会议录音</span>
+      <i></i><span>邮件与日程</span>
+      <i></i><span>IM 群聊</span>
+      <i></i><span>文档与汇报</span>
+      <i></i><span>CRM 与经营数据</span>
+      <i></i><span>外部情报</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 01 为什么 ================= -->
+<section class="sec sec-paper" id="why">
+  <div class="wrap">
+    <div class="why-top">
+      <div class="sec-head reveal">
+        <p class="sec-num">01 &nbsp;/&nbsp; 为什么</p>
+        <h2 class="sec-title">CEO 最缺的不是信息，<br>是<em>上下文</em></h2>
+        <p class="sec-lead">
+          搜索能给你资料，AI 能给你观点，但没有人能替你还原那个只有你知道的局面：
+          当时有哪几个选项、你赌的是什么、为什么否掉了另一条路。这些判断的依据，正以每年数百场的速度产生，也以同样的速度消失。
+        </p>
+      </div>
+      <blockquote class="why-quote reveal d1">
+        CEO 的时间被切成碎片，<br>而判断需要完整。<span>—</span>
+      </blockquote>
+    </div>
+
+    <div class="cards-3">
+      <article class="card reveal">
+        <p class="card-k">LOSS 01</p>
+        <h3>上下文散落在系统之外</h3>
+        <p>会议录音在手机里，纪要在群里，依据在 PPT 的备注里，最后的判断在你的脑子里。要用的时候找不到；找到了，也不敢确认那是不是最终版。</p>
+        <p class="card-more">结果：<b>每次决策都从零开始重建现场</b>，重建的成本由你一个人承担。</p>
+      </article>
+
+      <article class="card reveal d1">
+        <p class="card-k">LOSS 02</p>
+        <h3>经验无法复利</h3>
+        <p>同一个坑，三年踩两次；同一种谈判失误，换了个客户又犯一次。决策没有归档，复盘只能靠回忆，组织学不到东西——因为没人把学过的东西留下来。</p>
+        <p class="card-more">结果：<b>十年经验，抵不过一次人员更替</b>。</p>
+      </article>
+
+      <article class="card reveal d2">
+        <p class="card-k">LOSS 03</p>
+        <h3>通用 AI 给不了你要的答案</h3>
+        <p>它知道世界，但不知道你的公司。它能写出一份漂亮的行业分析，却回答不了「我们去年为什么放弃华南」。没有上下文的 AI，只能输出正确而无用的建议。</p>
+        <p class="card-more">结果：<b>工具越来越多，决策质量没有变好</b>。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 是什么 ================= -->
+<section class="sec sec-paper-2" id="what">
+  <div class="wrap">
+    <div class="def-grid">
+      <div class="def-text">
+        <div class="sec-head reveal">
+          <p class="sec-num">02 &nbsp;/&nbsp; 是什么</p>
+          <h2 class="sec-title">一个只服务你一个人的<br><em>AI 参谋</em></h2>
+        </div>
+
+        <div class="reveal d1" style="margin-top:26px">
+          <p>
+            aibrain 不是又一个聊天工具，也不是给全公司用的知识库。它是一套<strong>围绕 CEO 决策而建的第二大脑</strong>：
+            把你每天产生的会议、对话、文件、判断与外部情报收进来，整理成有条理、可检索、可追问的记忆，
+            再在你需要的那一刻，把相关的过去调到你面前。
+          </p>
+          <p>
+            它由三层构成：<strong>记忆层</strong>负责如实保存，<strong>推理层</strong>负责在你的上下文里思考，
+            <strong>行动层</strong>负责把结论落成简报、决策卡与待办。三层合起来，才是「大脑」，而不只是「硬盘」。
+          </p>
+
+          <div class="def-mark">
+            通用 AI 回答问题，aibrain 回答<strong>你的问题</strong>——<br>
+            它知道你说过什么、答应过谁、赌过什么、输在哪里。
+          </div>
+        </div>
+      </div>
+
+      <div class="layers reveal d2">
+        <div class="layer">
+          <div class="layer-k"><b>01</b>MEMORY</div>
+          <div>
+            <h4>记忆层：把你经历过的事，变成可检索的结构</h4>
+            <p>会议录音转写、邮件与日程、IM 关键对话、文档与汇报、客户与人才信息，按「人 / 事 / 议题 / 时间」四轴归档，每一条都能追到原始出处。</p>
+            <div class="chips">
+              <span class="chip">语音转写</span>
+              <span class="chip">多源接入</span>
+              <span class="chip">原文溯源</span>
+              <span class="chip">自动标签</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer">
+          <div class="layer-k"><b>02</b>REASON</div>
+          <div>
+            <h4>推理层：在你的上下文里思考，而不是在公开语料里猜</h4>
+            <p>回答前先检索你的档案，回答时标注依据，找不到依据就直说不知道。它会区分「事实」「你的原话」与「推断」，让你一眼看出哪句能拿去用。</p>
+            <div class="chips">
+              <span class="chip">检索增强</span>
+              <span class="chip">结论带出处</span>
+              <span class="chip">拒答机制</span>
+              <span class="chip">多方观点对照</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer">
+          <div class="layer-k"><b>03</b>ACT</div>
+          <div>
+            <h4>行动层：把结论变成明天的动作</h4>
+            <p>晨间简报、会前备忘、会后备忘、决策卡、议题追踪——输出的是可以直接用于开会和签字的东西，而不是一段需要你再改一遍的文字。</p>
+            <div class="chips">
+              <span class="chip">决策卡</span>
+              <span class="chip">会前备忘</span>
+              <span class="chip">承诺追踪</span>
+              <span class="chip">季度复盘初稿</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 能力 ================= -->
+<section class="sec sec-dark" id="capability">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">03 &nbsp;/&nbsp; 六项能力</p>
+      <h2 class="sec-title">它具体替你做六件事</h2>
+      <p class="sec-lead on-dark">
+        不是功能清单，而是六种具体的能力：每一件都对应 CEO 每周真实发生、却一直没有系统承接的动作。
+      </p>
+    </div>
+
+    <div class="cap-grid">
+      <article class="cap reveal">
+        <svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="4" y="3.5" width="13" height="17" rx="1.5"/>
+          <path d="M7.5 8h6M7.5 11.5h6M7.5 15h3.5"/>
+          <path d="M17 6.5h3v14H7"/>
+        </svg>
+        <h3>决策档案 <small>Decision Ledger</small></h3>
+        <p>每一个重要决定都留一份档：背景、选项、依据、赌注、谁反对、事后验证。一年后你可以直接问它：当初为什么否掉那个方案。</p>
+        <p class="cap-line">典型价值：把「拍脑袋」变成可复盘的资产。</p>
+      </article>
+
+      <article class="cap reveal d1">
+        <svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12h2.5l1.6-4.5 2.6 9L12 5l2.2 12 1.9-6.5 1.4 2.5H21"/>
+        </svg>
+        <h3>会议记忆 <small>Meeting Memory</small></h3>
+        <p>录音转写、要点提取、分歧标记、待办归属。会开完，纪要已经发出、责任已经到人、承诺进入追踪——你不需要再口述一遍。</p>
+        <p class="cap-line">典型价值：一周省下 3–5 小时复述与追进度。</p>
+      </article>
+
+      <article class="cap reveal d2">
+        <svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="6" r="2.6"/>
+          <circle cx="5.5" cy="17" r="2.4"/>
+          <circle cx="18.5" cy="17" r="2.4"/>
+          <path d="M10.6 8.2 7 14.8M13.4 8.2 17 14.8M8 17h8"/>
+        </svg>
+        <h3>人物图谱 <small>People Graph</small></h3>
+        <p>客户、高管、候选人、投资人：谁说过什么、在意什么、上次谈到哪一步、有没有兑现。见面前三分钟读完，谈话从第七句开始。</p>
+        <p class="cap-line">典型价值：不再问「我们上次聊到哪」。</p>
+      </article>
+
+      <article class="cap reveal">
+        <svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 19V5M4 19h16"/>
+          <path d="M8 15.5V11M12 15.5V7.5M16 15.5v-3"/>
+          <path d="M7 6.5l3.5 2.5 3-3 3.8 2"/>
+        </svg>
+        <h3>战略推演 <small>Strategy Sandbox</small></h3>
+        <p>用你自己的历史决策与经营数据做假设推演：如果降价 10%、如果砍掉这条产品线、如果换一种合作结构，三个月后会发生什么。</p>
+        <p class="cap-line">典型价值：把「凭直觉赌」变成「有依据地赌」。</p>
+      </article>
+
+      <article class="cap reveal d1">
+        <svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.5 6.5h9M4.5 12h11M4.5 17.5h6"/>
+          <path d="M16 17.5l2 2 3.5-4" />
+        </svg>
+        <h3>议题追踪 <small>Issue Tracker</small></h3>
+        <p>悬而未决的问题不会自己消失，它们只是在暗处发酵。所有未闭环的议题排队、提醒、归档——包括那些「等我想想」的事。</p>
+        <p class="cap-line">典型价值：会议室里不再重复三个月前的争论。</p>
+      </article>
+
+      <article class="cap reveal d2">
+        <svg class="cap-ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 12.5c0 3.6-3.6 6.5-8 6.5-1 0-2-.15-2.9-.42L4 20l1.4-3.4C4.5 15.4 4 14 4 12.5 4 8.9 7.6 6 12 6s8 2.9 8 6.5Z"/>
+          <path d="M8.5 12.5h.01M12 12.5h.01M15.5 12.5h.01" stroke-linecap="round" stroke-width="2"/>
+        </svg>
+        <h3>随身提问 <small>Ask aibrain</small></h3>
+        <p>在微信里随手问一句：「去年 Q3 我们为什么放弃华南？」答案带出处，点开原文，附上当时参与的人与后续变化。</p>
+        <p class="cap-line">典型价值：判断不再依赖「我记得」。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 落地路径 ================= -->
+<section class="sec sec-paper" id="path">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">04 &nbsp;/&nbsp; 落地路径</p>
+      <h2 class="sec-title">90 天，从「接入」到<em>复利</em></h2>
+      <p class="sec-lead">
+        第二大脑不是买来的，是长出来的。我们把落地拆成四段，每一段都有明确的交付物与验收标准，
+        你只需要付出每周一次、每次一小时的配合。
+      </p>
+    </div>
+
+    <div class="path">
+      <div class="step reveal">
+        <div class="step-when">第 1 周</div>
+        <div>
+          <h3>接入：先把你的世界接进来</h3>
+          <p>两小时访谈，梳理你的决策类型与信息源；随后接入日历、会议、文档、邮件与历史资料。同步确定权限边界：哪些只属于你，哪些可以进入组织记忆。</p>
+          <span class="step-out"><b>交付</b>个人语料库 v1 ＋ 权限矩阵</span>
+        </div>
+      </div>
+
+      <div class="step reveal d1">
+        <div class="step-when">第 2–4 周</div>
+        <div>
+          <h3>沉淀：把过去一年变成结构</h3>
+          <p>回溯近 12 个月的关键会议与决策，整理出第一版决策档案与人物图谱：哪些判断成立、哪些被证伪、哪些还没结算。这一步最费力，也最值钱。</p>
+          <span class="step-out"><b>交付</b>决策档案 30–50 条 ＋ 人物图谱首版</span>
+        </div>
+      </div>
+
+      <div class="step reveal d2">
+        <div class="step-when">第 2 个月</div>
+        <div>
+          <h3>调用：让它进入你的每一天</h3>
+          <p>每天两个十分钟：晨间简报（今天要判断什么、昨天留下了什么）、会前备忘（这件事的来龙去脉、对方的底牌）。习惯先于功能——不改变动作的功能，最终都会被弃用。</p>
+          <span class="step-out"><b>交付</b>每日简报 ＋ 会前备忘模板 ＋ 随身问答</span>
+        </div>
+      </div>
+
+      <div class="step reveal d3">
+        <div class="step-when">第 3 个月起</div>
+        <div>
+          <h3>复利：让决策开始互相供养</h3>
+          <p>季度复盘由系统出初稿；新高管入职，30 天读完公司三年的关键决策；重大谈判前，先看历史上所有相似的局。此时第二大脑才真正开始付利息。</p>
+          <span class="step-out"><b>交付</b>季度复盘报告 ＋ 组织记忆共享机制</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 场景 ================= -->
+<section class="sec sec-paper-2" id="scenes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">05 &nbsp;/&nbsp; 典型场景</p>
+      <h2 class="sec-title">四个最需要它的时刻</h2>
+      <p class="sec-lead">如果只在这四件事上使用 aibrain，它也已经值回票价。</p>
+    </div>
+
+    <div class="scene-tabs" role="tablist" aria-label="典型场景">
+      <button class="scene-tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true">董事会前 72 小时</button>
+      <button class="scene-tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false">季度复盘</button>
+      <button class="scene-tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">高管与人才决策</button>
+      <button class="scene-tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false">外部情报研判</button>
+    </div>
+
+    <div class="scene-body">
+      <div class="scene-panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+        <h3 class="scene-h">把 300 页材料和三年承诺，<br>压成一页纸的对齐</h3>
+        <p class="scene-p">
+          董事会不会因为你准备得少而降低要求。真正消耗你的不是材料本身，而是材料背后的时间线：
+          上次会议答应了什么、哪条承诺没兑现、哪位股东一直在追问同一个数字。
+        </p>
+        <ul class="scene-list">
+          <li><span>01</span>自动生成「上次决议执行情况」，逐条标注完成、延期与放弃</li>
+          <li><span>02</span>提取股东历史关注点，按人排列，附原话出处</li>
+          <li><span>03</span>把本期议题与历史决策对照，提示可能被追问的矛盾点</li>
+          <li><span>04</span>输出一页预读稿：三个必须讲清的问题，三句准备好的回答</li>
+        </ul>
+      </div>
+      <aside class="scene-note">
+        <p class="sn-k">BEFORE THE BOARD</p>
+        <p>你不再需要在会前一夜重读所有材料——你要做的是决定怎么讲，而不是重新记起发生过什么。</p>
+        <q>「最大的风险不是不知道，而是在会上被问起时，发现自己记错了。」</q>
+      </aside>
+
+      <div class="scene-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+        <h3 class="scene-h">把三个月、两百场会，<br>折成五个判断</h3>
+        <p class="scene-p">
+          复盘最怕两件事：一是只凭印象，二是只谈结果。aibrain 会把这段时间里你实际做过的判断摊开，
+          对照当时的信息与后来的结果，告诉你哪几个判断错了、错在信息还是错在推理。
+        </p>
+        <ul class="scene-list">
+          <li><span>01</span>按议题聚类，还原每个判断的决策时点与当时掌握的信息</li>
+          <li><span>02</span>区分「运气好」与「判断对」，避免把偶然当成能力</li>
+          <li><span>03</span>识别重复出现的失误模式，形成个人决策偏差清单</li>
+          <li><span>04</span>生成复盘初稿：结论、证据、待验证假设、下一季度动作</li>
+        </ul>
+      </div>
+      <aside class="scene-note">
+        <p class="sn-k">QUARTERLY REVIEW</p>
+        <p>复盘的价值不在总结，而在于把「我通常会怎么错」写下来，下次在同一个地方停一秒。</p>
+        <q>「经验不是经历得多，而是经历被结算过。」</q>
+      </aside>
+
+      <div class="scene-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+        <h3 class="scene-h">看一个人，<br>要看他说过的话有没有兑现</h3>
+        <p class="scene-p">
+          面试给你两小时，共事给你两年。aibrain 把内部人才与候选人在会议、项目、承诺中的表现汇总成一条时间线，
+          让「感觉靠谱」变成「有据可查」。
+        </p>
+        <ul class="scene-list">
+          <li><span>01</span>承诺兑现记录：定过的目标、答应的交付、实际结果</li>
+          <li><span>02</span>协作评价：谁在哪些场合支持过、反对过、提出过关键异议</li>
+          <li><span>03</span>候选人对标：外部履历与内部同类岗位的真实要求逐条比对</li>
+          <li><span>04</span>用人决策卡：支持理由、反对理由、最大不确定性、退出条件</li>
+        </ul>
+      </div>
+      <aside class="scene-note">
+        <p class="sn-k">PEOPLE DECISIONS</p>
+        <p>看人最忌讳两件事：被面试时的表达打动，被一次失误定义。时间线能把两者都校正回来。</p>
+        <q>「判断一个人，要看他兑现过什么，而不是承诺过什么。」</q>
+      </aside>
+
+      <div class="scene-panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+        <h3 class="scene-h">情报不按时间归档，<br>按「对我们意味着什么」归档</h3>
+        <p class="scene-p">
+          行业新闻每天都有，真正有用的是它和你已做的判断之间的关系：这条消息验证了我们去年的哪个假设？
+          又推翻了哪个？竞对这一步，是补短板还是抄我们的路？
+        </p>
+        <ul class="scene-list">
+          <li><span>01</span>外部信息进入时自动关联历史判断，标注「验证 / 冲突 / 无关」</li>
+          <li><span>02</span>竞对动作按能力维度拆解，而不是按发布时间罗列</li>
+          <li><span>03</span>政策与行业信号做影响推演：谁会先受影响、我们还有多久</li>
+          <li><span>04</span>每周一页情报简报，只在需要你决策的地方标红</li>
+        </ul>
+      </div>
+      <aside class="scene-note">
+        <p class="sn-k">OUTSIDE SIGNALS</p>
+        <p>情报的价值不在多，而在它是否改变了你已经做出的判断。没有关联的信息，只是噪音。</p>
+        <q>「不是每天读多少新闻，而是每天有多少判断被修正。」</q>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 对比 ================= -->
+<section class="sec sec-paper" id="compare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">06 &nbsp;/&nbsp; 区别</p>
+      <h2 class="sec-title">和通用 AI、知识库<br>到底差在哪</h2>
+      <p class="sec-lead">
+        差别不在模型，在上下文的所有权。通用 AI 拥有世界，知识库存放文档，aibrain 记住的是<strong>你的判断</strong>。
+      </p>
+    </div>
+
+    <div class="cmp-wrap reveal d1">
+      <table class="cmp">
+        <caption class="sr-only" style="position:absolute;left:-9999px">aibrain 与通用 AI、企业知识库的能力对比</caption>
+        <thead>
+          <tr>
+            <th scope="col">维度</th>
+            <th scope="col" class="dim">通用 AI 助手</th>
+            <th scope="col" class="dim">企业知识库</th>
+            <th scope="col" class="self">aibrain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">知识来源</th>
+            <td class="dim">公开语料</td>
+            <td class="dim">员工手动沉淀的文档</td>
+            <td class="self">你的会议、对话、文档、决策与外部情报</td>
+          </tr>
+          <tr>
+            <th scope="row">回答依据</th>
+            <td class="dim">无法溯源，容易自信地错</td>
+            <td class="dim">能搜到文档，但答不出结论</td>
+            <td class="self">每条结论标注出处，可点开原文</td>
+          </tr>
+          <tr>
+            <th scope="row">是否理解「我们」</th>
+            <td class="dim">不懂你的公司</td>
+            <td class="dim">懂业务，不懂你的判断逻辑</td>
+            <td class="self">以你历次决策为推理起点</td>
+          </tr>
+          <tr>
+            <th scope="row">记忆</th>
+            <td class="dim">每次对话从零开始</td>
+            <td class="dim">存的是资料，不是上下文</td>
+            <td class="self">持续累积，越用越准</td>
+          </tr>
+          <tr>
+            <th scope="row">使用姿势</th>
+            <td class="dim">你去找它，且要想好怎么问</td>
+            <td class="dim">你写进去，才有人能查到</td>
+            <td class="self">它每天主动找你：简报、备忘、提醒</td>
+          </tr>
+          <tr>
+            <th scope="row">数据归属</th>
+            <td class="dim">进入第三方平台</td>
+            <td class="dim">企业内部，但权限粗放</td>
+            <td class="self">私有部署，按人按事分级授权，可随时全量导出</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 安全 ================= -->
+<section class="sec sec-dark" id="trust">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">07 &nbsp;/&nbsp; 安全与边界</p>
+      <h2 class="sec-title">把最敏感的上下文交出去，<br>前提是它真的关得住</h2>
+      <p class="sec-lead on-dark">
+        第二大脑里装的是董事会材料、人事判断与未公开的战略。所以我们先谈边界，再谈能力。
+      </p>
+    </div>
+
+    <div class="trust-grid">
+      <article class="trust reveal">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10" width="15" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          私有部署，数据不出域
+        </h3>
+        <p>支持部署在企业自有云或内网环境，模型调用可走私有通道。原始音频、文档与转写文本不离开你的存储，第三方仅承担计算，不保留副本。</p>
+      </article>
+
+      <article class="trust reveal d1">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 19 6v6c0 4.2-2.9 7.4-7 8.5-4.1-1.1-7-4.3-7-8.5V6l7-2.5Z"/><path d="M9 12l2 2 4-4"/></svg>
+          不训练，不喂养公共模型
+        </h3>
+        <p>你的数据不进入任何公共模型的训练集，也不用于跨客户的产品改进。合同层面明确写入，可接受安全审计与渗透测试。</p>
+      </article>
+
+      <article class="trust reveal d1">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M16 8.5h5M16 12h5M18.5 15.5h2.5"/></svg>
+          分级授权：私人记忆与组织记忆隔离
+        </h3>
+        <p>CEO 的私人档案与可共享的组织记忆在逻辑上完全隔离，谁能看到哪一层由你设定。高管版只共享「事」，不共享「人」。</p>
+      </article>
+
+      <article class="trust reveal d2">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h4l2-5 3 10 2.5-7 1.8 4H20"/><path d="M4 4.5v15M20 4.5v15" opacity=".4"/></svg>
+          人在环：它给证据，不做决定
+        </h3>
+        <p>aibrain 的定位是参谋，不是代理。它呈现证据、选项与代价，不替你签字、不自动对外发送任何内容，所有外发动作需你确认。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 08 版本 ================= -->
+<section class="sec sec-paper-2" id="plans">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">08 &nbsp;/&nbsp; 交付与版本</p>
+      <h2 class="sec-title">三种规模，<em>同一个起点</em></h2>
+      <p class="sec-lead">
+        所有版本都从一次访谈与一份 90 天落地计划开始。价格按年订阅、按席位计，具体方案在诊断后给出——
+        因为决定成本的不是人数，是你要接入多少上下文。
+      </p>
+    </div>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <h3 class="plan-name">Personal</h3>
+        <p class="plan-for">个人版 · 1 席</p>
+        <p class="plan-desc">给刚接班的创始人、或希望先自己用起来再推广的 CEO。</p>
+        <ul class="plan-list">
+          <li>个人日历、会议、文档、邮件接入</li>
+          <li>会议记忆与决策档案（30 条起）</li>
+          <li>随身问答：微信 / 手机端</li>
+          <li>晨间简报 + 会前备忘</li>
+          <li>数据可随时全量导出</li>
+        </ul>
+        <div class="plan-foot">
+          <a class="btn btn-ghost" href="#contact">预约诊断</a>
+          <p class="plan-meta">按年订阅 · 单人席位</p>
+        </div>
+      </article>
+
+      <article class="plan pick reveal d1">
+        <span class="plan-tag">最常选</span>
+        <h3 class="plan-name">Executive</h3>
+        <p class="plan-for">高管版 · 3–8 席</p>
+        <p class="plan-desc">给需要把「个人大脑」升级成「班子共识」的经营团队。</p>
+        <ul class="plan-list">
+          <li>含个人版全部能力</li>
+          <li>组织记忆层：项目、客户、议题共享</li>
+          <li>人物图谱与承诺追踪</li>
+          <li>季度复盘报告自动生成</li>
+          <li>高管交接包：30 天读懂三年决策</li>
+          <li>专属落地顾问，前 90 天陪跑</li>
+        </ul>
+        <div class="plan-foot">
+          <a class="btn btn-gold" href="#contact">预约诊断</a>
+          <p class="plan-meta">按年订阅 · 按席位计</p>
+        </div>
+      </article>
+
+      <article class="plan reveal d2">
+        <h3 class="plan-name">Enterprise</h3>
+        <p class="plan-for">企业版 · 不限席位</p>
+        <p class="plan-desc">给把上下文视为核心资产、需要私有化与合规审计的组织。</p>
+        <ul class="plan-list">
+          <li>含高管版全部能力</li>
+          <li>私有化 / 内网部署，SSO 与审计日志</li>
+          <li>定制数据源：CRM、ERP、工单、门店</li>
+          <li>权限矩阵与合规评估支持</li>
+          <li>专属成功团队与季度策略对齐</li>
+        </ul>
+        <div class="plan-foot">
+          <a class="btn btn-ghost" href="#contact">预约诊断</a>
+          <p class="plan-meta">年度框架 · 按需报价</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 09 FAQ ================= -->
+<section class="sec sec-paper" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="sec-num">09 &nbsp;/&nbsp; 常见问题</p>
+      <h2 class="sec-title">你可能正在担心的几件事</h2>
+    </div>
+
+    <div class="faq reveal d1">
+      <details open>
+        <summary>我需要先把自己的资料整理干净吗？</summary>
+        <div class="a">不需要。<b>第一步是接入，不是归档。</b>你现有的混乱本身就是信息——哪些文件被反复打开、哪些群在半夜活跃、哪些会议没有结论，这些都会成为判断依据。整理是系统的活儿，不是你的活儿。</div>
+      </details>
+
+      <details>
+        <summary>它会一本正经地胡说八道吗？</summary>
+        <div class="a">我们做了三层约束：<b>回答必须带出处</b>，点开可看原文；<b>找不到依据就明确说不知道</b>，不猜测；<b>区分事实、你的原话与系统推断</b>，三者用不同标记呈现。它宁可少答，也不替你编一个能用的答案。</div>
+      </details>
+
+      <details>
+        <summary>我的数据会被用来训练模型吗？</summary>
+        <div class="a">不会。数据不进入任何公共模型的训练集，也不用于跨客户的产品改进，这一条写进合同。企业版支持完全私有部署，原始数据与转写文本不离开你的存储。</div>
+      </details>
+
+      <details>
+        <summary>需要我改变工作习惯吗？</summary>
+        <div class="a">只需要加两个十分钟：<b>早上看一次简报，重要会议前看一次备忘。</b>不要求你写笔记、不要求你打标签、不要求你换工具。如果一个功能需要你额外付出，我们默认它会被弃用——这是设计前提，不是附加承诺。</div>
+      </details>
+
+      <details>
+        <summary>多久能看到效果？</summary>
+        <div class="a">第 2 周出第一份会前备忘；第 6 周你第一次用历史决策回答了当下的问题；真正的复利在第 3 个月之后——那时它开始主动提醒你「这件事和去年那次很像」。前 90 天是投入期，请按项目而不是按工具来对待它。</div>
+      </details>
+
+      <details>
+        <summary>和飞书、Notion、Obsidian 这些知识库有什么不同？</summary>
+        <div class="a">那些是<b>你写进去的</b>，aibrain 是<b>替你记住的</b>。知识库解决「资料存在哪」，aibrain 解决「当时为什么这么判断」。前者需要组织纪律，后者只需要你正常开会、正常说话。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10 联系 ================= -->
+<section class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <p class="eyebrow on-dark">Start here</p>
+      <h2>先聊 30 分钟，<br>不谈产品，谈<em>你手上那个判断</em></h2>
+      <p class="contact-lead">
+        把你最近一个悬而未决的决定带过来：要不要进这个市场、要不要换掉这个人、要不要接这笔钱。
+        我们用这半小时，看看它值不值得被记住。
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <p class="cc-k">预约与咨询</p>
+      <a class="cc-item" href="tel:17612092024">
+        <span>电话 / PHONE</span>
+        <strong>176 1209 2024</strong>
+      </a>
+      <a class="cc-item" href="mailto:anyio@foxmail.com?subject=aibrain%20%E8%AF%8A%E6%96%AD%E9%A2%84%E7%BA%A6&body=%E6%88%91%E6%83%B3%E7%BA%A6%2030%20%E5%88%86%E9%92%9F%EF%BC%8C%E8%81%8A%E4%B8%80%E4%B8%8B%E6%88%91%E6%89%8B%E4%B8%8A%E8%BF%99%E4%B8%AA%E5%88%A4%E6%96%AD%EF%BC%9A">
+        <span>邮箱 / EMAIL</span>
+        <strong>anyio@foxmail.com</strong>
+      </a>
+      <p class="cc-foot">工作日 9:00–19:00 响应；邮件请注明「aibrain 诊断」，附上你希望解决的场景，我们会先回一份诊断提纲。</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#top" aria-label="aibrain 首页">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="15.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".35"/>
+            <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="1" opacity=".55"/>
+            <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+            <circle cx="20" cy="4.5" r="2.4" fill="currentColor"/>
+          </svg>
+          <span class="brand-text"><strong>aibrain</strong><em>SECOND&nbsp;BRAIN&nbsp;FOR&nbsp;CEO</em></span>
+        </a>
+        <p class="footer-slogan">为 CEO 搭建第二大脑。<br>让判断力可以被记住、被复用、被传承。</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="产品">
+        <p class="fn-k">产品</p>
+        <a href="#what">它是什么</a>
+        <a href="#capability">六项能力</a>
+        <a href="#scenes">典型场景</a>
+        <a href="#plans">版本与交付</a>
+      </nav>
+
+      <nav class="footer-nav" aria-label="了解">
+        <p class="fn-k">了解</p>
+        <a href="#why">为什么需要</a>
+        <a href="#path">90 天落地</a>
+        <a href="#compare">与通用 AI 的区别</a>
+        <a href="#trust">安全与边界</a>
+      </nav>
+
+      <nav class="footer-nav" aria-label="联系">
+        <p class="fn-k">联系</p>
+        <a href="tel:17612092024">176 1209 2024</a>
+        <a href="mailto:anyio@foxmail.com">anyio@foxmail.com</a>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">预约诊断</a>
+      </nav>
+    </div>
+
+    <div class="footer-legal">
+      <p class="copyright">© <span id="year">2026</span> 问道信息 版权所有 · aibrain 为其产品品牌</p>
+      <p class="beian">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.6 5.4 3.6 8.5S14.4 18.1 12 20.5c-2.4-2.4-3.6-5.4-3.6-8.5S9.6 5.9 12 3.5Z"/></svg>
+          粤ICP备18140663号
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/aibrain.js"></script>
+</body>
+</html>
